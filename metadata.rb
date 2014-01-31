@@ -9,32 +9,32 @@ version          '0.1.0'
 recipe "traincost::server",
   "Setup TrainCost Management System"
 
-recipe "utility::bash_conf.rb",
+recipe "utility::bash_conf",
   "Put bash_conf"
 
-recipe "utility::bind-utils.rb",
+recipe "utility::bind-utils",
   "Install bind-utils"
 
-recipe "utility::dos2unix.rb",
+recipe "utility::dos2unix",
   "Install dos2unix"
 
-recipe "utility::git.rb",
+recipe "utility::git",
   "Install git"
 
-recipe "utility::git_rpm.rb",
+recipe "utility::git_rpm",
   "Install git via RPM files"
 
-recipe "utility::jq.rb",
+recipe "utility::jq",
   "Install jq"
 
-recipe "utility::jsonpp.rb",
+recipe "utility::jsonpp",
   "Install jsonapp"
 
-recipe "utility::lv.rb",
+recipe "utility::lv",
   "Install lv"
 
-recipe "utility::vim.rb",
+recipe "utility::vim",
   "Install vim"
 
-recipe "utility::yajl.rb",
+recipe "utility::yajl",
   "Install yajl"
