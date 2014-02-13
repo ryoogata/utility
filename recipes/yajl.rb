@@ -12,10 +12,17 @@ git "/usr/local/src/yajl" do
   action :sync
 end
 
-%w{
-  cmake doxygen
-}.each do |package_name|
-  package "#{package_name}" do
+case node['platform']
+when "centos"
+  %w{
+    cmake doxygen
+  }.each do |package_name|
+    package "#{package_name}" do
+      action :install
+    end
+  end
+when "ubuntu"
+  package "cmake" do
     action :install
   end
 end

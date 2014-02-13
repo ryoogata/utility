@@ -1,5 +1,5 @@
 case node['platform']
-when "centos"
+when "centos","ubuntu"
   package "git" do
     action :install
   end
