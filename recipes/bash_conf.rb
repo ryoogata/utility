@@ -6,12 +6,6 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-
-cookbook_file "/etc/profile.d/vim.sh" do
-  source "vim.sh"
-  mode "0644"
-end
-
 cookbook_file "/root/.inputrc" do
   source "inputrc"
 end
