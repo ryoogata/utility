@@ -23,4 +23,8 @@ when "centos"
     source "/tmp/lv-4.51-1.el6.rf.x86_64.rpm"
     provider Chef::Provider::Package::Rpm
   end
+when "ubuntu"
+  package "lv" do
+    action :install
+  end
 end
