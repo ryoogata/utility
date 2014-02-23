@@ -6,7 +6,11 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-gem_package "kitchen-docker" do
-  action :install
-  options("--no-ri --no-rdoc")
+%w{
+  kitchen-docker kitchen-vagrant
+}.each do |package_name|
+  gem_package "#{package_name}" do
+    action :install
+    options("--no-ri --no-rdoc")
+  end
 end
