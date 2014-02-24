@@ -29,6 +29,7 @@ when "centos"
     user "root"
     code <<-EOH
       sed -i '$a complete -C aws_completer aws' /etc/bashrc
+      sed -i '$a export TERM=xterm-256color' /etc/bashrc
     EOH
   end
 end
