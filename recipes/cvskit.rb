@@ -6,6 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+include_recipe "utility::git"
 
 git "#{node['cvskit']['_SOURCE_DOWNLOAD_DIR']}/cvskit" do
   repository "git://github.com/onyxfish/csvkit.git"
