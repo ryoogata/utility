@@ -7,7 +7,7 @@
 # All rights reserved - Do Not Redistribute
 #
 %w{
-  kitchen-docker kitchen-vagrant
+  kitchen-docker kitchen-vagrant psych chef berkshelf lxc
 }.each do |package_name|
   gem_package "#{package_name}" do
     action :install
