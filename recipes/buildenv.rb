@@ -12,4 +12,12 @@ when "ubuntu"
       action :install
     end
   end
+when "centos"
+  %w{
+    make gcc
+  }.each do |package_name|
+    package "#{package_name}" do
+      action :install
+    end
+  end
 end
