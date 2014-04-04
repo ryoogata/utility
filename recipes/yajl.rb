@@ -6,7 +6,7 @@
 #
 # All rights reserved - Do Not Redistribute
 #
-git "/usr/local/src/yajl" do
+git "#{node['yajl']['_SOURCE_DOWNLOAD_DIR']}/yajl" do
   repository "git://github.com/lloyd/yajl.git"
   reference "master"
   action :sync
@@ -30,11 +30,16 @@ end
 script "install-yajl" do
   interpreter "bash"
   user "root"
-  cwd "/usr/local/src/yajl"
+  cwd "#{node['yajl']['_SOURCE_DOWNLOAD_DIR']}/yajl"
   code <<-EOH
     ./configure
     make
     make install
   EOH
   not_if {File.exists?("/usr/local/bin/json_verify")}
+end
+
+directory "#{node['yajl']['_SOURCE_DOWNLOAD_DIR']}/yajl" do
+  recursive true
+  action :delete
 end
