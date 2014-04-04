@@ -6,6 +6,9 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+include_recipe "utility::git"
+include_recipe "utility::buildenv"
+
 git "#{node['yajl']['_SOURCE_DOWNLOAD_DIR']}/yajl" do
   repository "git://github.com/lloyd/yajl.git"
   reference "master"
