@@ -6,6 +6,25 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+case node['platform']
+when "centos"
+  %w{
+    rubygems ruby ruby-devel
+  }.each do |package_name|
+    package "#{package_name}" do
+      action :install
+    end
+  end
+when "ubuntu"
+  %w{
+    rubygems ruby ruby-dev
+  }.each do |package_name|
+    package "#{package_name}" do
+      action :install
+    end
+  end
+end
+
 %w{
   kitchen-docker kitchen-vagrant psych chef berkshelf lxc
 }.each do |package_name|
