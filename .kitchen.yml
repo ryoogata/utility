@@ -1,0 +1,32 @@
+---
+driver_plugin: docker
+driver_config:
+  require_chef_omnibus: true
+
+platforms:
+- name: ubuntu
+  driver_config:
+    image: ubuntu:13.04
+- name: centos-6.4
+  driver_config:
+    image: centos:6.4
+
+suites:
+- name: default
+  run_list:
+  - recipe[utility::bash_conf]
+  - recipe[utility::berkshelf]
+  - recipe[utility::kitchen-docker]
+  - recipe[utility::git]
+  - recipe[utility::git_rpm]
+  - recipe[utility::bind-utils]
+  - recipe[utility::buildenv]
+  - recipe[utility::cvskit]
+  - recipe[utility::dos2unix]
+  - recipe[utility::jq]
+  - recipe[utility::jsonpp]
+  - recipe[utility::lv]
+  - recipe[utility::scl]
+  - recipe[utility::sysctl]
+  - recipe[utility::yajl]
+  attributes:
