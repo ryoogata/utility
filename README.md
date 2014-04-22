@@ -1,5 +1,7 @@
 utility Cookbook
 ================
+[![Build Status](https://travis-ci.org/ryoogata/utility.svg?branch=master)](https://travis-ci.org/ryoogata/utility)
+
 TODO: Enter the cookbook description here.
 
 e.g.
