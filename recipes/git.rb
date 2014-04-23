@@ -1,8 +1,5 @@
-case node['platform']
-when "centos","ubuntu"
-  package "git" do
-    action :install
-  end
+package "git" do
+  action :install
 end
 
 template "/root/.gitconfig" do

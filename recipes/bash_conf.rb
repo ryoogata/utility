@@ -10,16 +10,13 @@ cookbook_file "/root/.inputrc" do
   source "inputrc"
 end
 
-case node['platform']
-when "centos","ubuntu"
-  script "edit_inputrc" do
-    interpreter "bash"
-    user "root"
-    code <<-EOH
-      sed -i '/^$endif/i Control-p: history-search-backward' /etc/inputrc
-      sed -i '/^$endif/i set show-all-if-ambiguous on' /etc/inputrc
-    EOH
-  end
+script "edit_inputrc" do
+  interpreter "bash"
+  user "root"
+  code <<-EOH
+    sed -i '/^$endif/i Control-p: history-search-backward' /etc/inputrc
+    sed -i '/^$endif/i set show-all-if-ambiguous on' /etc/inputrc
+  EOH
 end
 
 case node['platform']
