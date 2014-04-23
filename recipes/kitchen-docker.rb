@@ -25,8 +25,13 @@ when "ubuntu"
   end
 end
 
+gem_package "berkshelf" do
+  action :install
+  options("-v node["berkshelf"]["version"] --no-ri --no-rdoc")
+end
+
 %w{
-  kitchen-docker kitchen-vagrant psych chef berkshelf lxc
+  kitchen-docker kitchen-vagrant psych chef lxc
 }.each do |package_name|
   gem_package package_name do
     action :install
