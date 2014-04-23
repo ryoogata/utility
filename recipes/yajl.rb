@@ -20,7 +20,7 @@ when "centos"
   %w{
     cmake doxygen
   }.each do |package_name|
-    package "#{package_name}" do
+    package package_name do
       action :install
     end
   end
