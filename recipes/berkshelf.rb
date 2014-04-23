@@ -11,7 +11,7 @@ when "centos"
   %w{
     rubygems ruby ruby-devel
   }.each do |package_name|
-    package "#{package_name}" do
+    package package_name do
       action :install
     end
   end
@@ -19,7 +19,7 @@ when "ubuntu"
   %w{
     rubygems ruby ruby-dev
   }.each do |package_name|
-    package "#{package_name}" do
+    package package_name do
       action :install
     end
   end
@@ -27,5 +27,5 @@ end
 
 gem_package "berkshelf" do
   action :install
-  options("--no-ri --no-rdoc")
+  options("-v #{node["berkshelf"]["version"]} --no-ri --no-rdoc")
 end
