@@ -1,6 +1,10 @@
 case node['platform']
 when "centos"
-  package "centos-release-SCL" do
-    action :install
+  %w{
+    centos-release-SCL ruby193
+  }.each do |package_name|
+    package package_name do
+      action :install
+    end
   end
 end
