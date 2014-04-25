@@ -10,6 +10,8 @@ platforms:
 - name: centos-6.4
   driver_config:
     image: centos:6.4
+  run_list:
+    - recipe[chruby]
 
 suites:
 - name: default
