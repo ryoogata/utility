@@ -19,7 +19,6 @@ recipe "utility::git_rpm", "Install git via RPM files"
 recipe "utility::jq", "Install jq"
 recipe "utility::jsonpp", "Install jsonapp"
 recipe "utility::lv", "Install lv"
-recipe "utility::vim", "Install vim"
 recipe "utility::yajl", "Install yajl"
 
 # == Attributes
