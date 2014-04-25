@@ -31,4 +31,6 @@ suites:
   - recipe[utility::scl]
   - recipe[utility::sysctl]
   - recipe[utility::yajl]
+  - recipe[utility::foodcritic]
+  - recipe[utility::tsunami]
   attributes:
