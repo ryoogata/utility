@@ -34,3 +34,11 @@ suites:
   - recipe[utility::foodcritic]
   - recipe[utility::tsunami]
   attributes:
+    sysctl:
+      net:
+        core:
+          somaxconn: '2000'
+          netdev_max_backlog: '2000'
+        ipv4:
+          tcp_max_syn_backlog: '2000'
+          tcp_max_syn_backlog: '2000'
