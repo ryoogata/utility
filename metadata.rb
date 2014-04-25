@@ -20,6 +20,14 @@ recipe "utility::jq", "Install jq"
 recipe "utility::jsonpp", "Install jsonapp"
 recipe "utility::lv", "Install lv"
 recipe "utility::yajl", "Install yajl"
+recipe "utility::berkshelf", "Install berkshelf"
+recipe "utility::buildenv", "Install buildenv"
+recipe "utility::cvskit", "Install cvskit"
+recipe "utility::foodcritic", "Install foodcritic"
+recipe "utility::kitchen-docker", "Install kitchen-docker"
+recipe "utility::scl", "Install scl"
+recipe "utility::sysctl", "setup sysctl "
+recipe "utility::tsunami", "Install tsunami udp"
 
 # == Attributes
 # 
