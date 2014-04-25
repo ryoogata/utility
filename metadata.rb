@@ -49,7 +49,7 @@ attribute "cvskit/_SOURCE_DOWNLOAD_DIR",
   :display_name => "",
   :description => "",
   :default => "/tmp",
-  :required => "required",
+  :required => "recommended",
   :recipes => [
     "utility::cvskit"
   ]
@@ -58,7 +58,7 @@ attribute "yajl/_SOURCE_DOWNLOAD_DIR",
   :display_name => "",
   :description => "",
   :default => "/tmp",
-  :required => "required",
+  :required => "recommended",
   :recipes => [
     "utility::yajl"
   ]
@@ -67,7 +67,7 @@ attribute "tsunami/_SOURCE_DOWNLOAD_DIR",
   :display_name => "",
   :description => "",
   :default => "/tmp",
-  :required => "required",
+  :required => "recommended",
   :recipes => [
     "utility::tsunami"
   ]
@@ -76,7 +76,7 @@ attribute "berkshelf/version",
   :display_name => "",
   :description => "",
   :default => "2.0.15",
-  :required => "required",
+  :required => "recommended",
   :recipes => [
     "utility::berkshelf"
   ]
