@@ -27,5 +27,6 @@ end
 
 gem_package "berkshelf" do
   action :install
-  options("-v #{node["berkshelf"]["version"]} --no-ri --no-rdoc")
+  version node['berkshelf']['version']
+  options("--no-ri --no-rdoc")
 end
