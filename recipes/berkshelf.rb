@@ -25,6 +25,10 @@ when "ubuntu"
   end
 end
 
+execute "Install dep-selector-libgecode" do
+  command "USE_SYSTEM_GECODE=1 gem install dep-selector-libgecode"
+end
+
 gem_package "berkshelf" do
   action :install
   version node['berkshelf']['version']
