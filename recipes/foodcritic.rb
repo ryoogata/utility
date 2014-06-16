@@ -1,7 +1,7 @@
 case node['platform']
 when "centos"
   %w{
-    rubygems ruby ruby-devel libxml2-devel libxslt-devel chef
+    rubygems ruby ruby-devel libxml2-devel libxslt-devel
   }.each do |package_name|
     package package_name do
       action :install
