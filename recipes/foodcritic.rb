@@ -5,6 +5,7 @@ when "centos"
   }.each do |package_name|
     package package_name do
       action :install
+      ignore_failure true
     end
   end
 when "ubuntu"
@@ -13,6 +14,7 @@ when "ubuntu"
   }.each do |package_name|
     package package_name do
       action :install
+      ignore_failure true
     end
   end
 end
